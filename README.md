@@ -1,44 +1,62 @@
-# Species-aware Eukaryotic Promoter Prediction and Strong/Weak Promoter Classification
+# 🧬 Species-aware Eukaryotic Promoter Prediction  
+### A Two-stage Framework for Generalized Promoter Recognition and Strong/Weak Promoter Classification
 
-This repository contains the implementation of a two-stage computational framework for generalized eukaryotic promoter prediction and species-aware promoter strength classification.
+<p align="center">
+  <img src="docs/graphical_abstract.png" width="850"/>
+</p>
 
-The framework first predicts whether a query DNA sequence is a promoter or non-promoter using multi-species promoter data. In the second stage, promoter strength is classified as strong or weak using transcriptional activity labels derived from FANTOM5 CAGE data. The project also includes explainable AI analysis using attention-based motif discovery and SHAP-based nucleotide-level attribution.
+<p align="center">
+  <b>Multi-species promoter prediction • Promoter strength classification • CNN–BiLSTM attention • SHAP explainability</b>
+</p>
 
----
-
-## Overview
-
-Promoters are key regulatory DNA elements that define transcription initiation and influence gene-expression output. Although many promoter prediction models have been developed, most existing tools are limited to prokaryotic genomes, single-species prediction, or binary promoter/non-promoter classification.
-
-This project addresses these limitations by developing:
-
-1. A generalized eukaryotic promoter/non-promoter prediction model trained on promoter sequences from multiple eukaryotic species.
-2. A promoter strength classification framework that predicts strong versus weak promoters using CAGE-derived transcriptional activity.
-3. A species-aware interpretation strategy to analyze motif-switching behavior across species.
-4. Explainable AI modules using attention scores and SHAP values to identify important promoter regions, nucleotides, and motifs.
-
----
-
-## Main Features
-
-- Multi-species eukaryotic promoter benchmark construction
-- GC-matched non-promoter dataset generation
-- Multiple DNA feature encoding schemes
-- Classical machine learning and deep learning model comparison
-- CNN–BiLSTM attention model for promoter/non-promoter prediction
-- CNN-based strong/weak promoter classification
-- FANTOM5 CAGE-derived promoter strength labeling
-- Attention-based motif analysis
-- SHAP-based nucleotide and position-level interpretation
-- Motif-switching analysis across species
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue"/>
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red"/>
+  <img src="https://img.shields.io/badge/SHAP-XAI-purple"/>
+  <img src="https://img.shields.io/badge/Bioinformatics-Promoter%20Prediction-green"/>
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey"/>
+</p>
 
 ---
 
-## Dataset Description
+## 📌 Overview
 
-### Promoter Dataset
+This repository provides the implementation of a **two-stage species-aware framework** for generalized eukaryotic promoter analysis.
 
-Experimentally validated promoter sequences were collected from EPDnew across 16 eukaryotic species. Each promoter sequence was extracted as a fixed-length 300 bp window relative to the transcription start site:
+The first stage predicts whether a query DNA sequence is a **promoter** or **non-promoter** using multi-species promoter data from **EPDnew**. The second stage classifies validated promoters as **strong** or **weak** using **FANTOM5 CAGE-derived transcriptional activity values**.
+
+The framework also includes model interpretation using **attention-based motif analysis** and **SHAP-based nucleotide-level attribution**.
+
+---
+
+## ✨ Key Contributions
+
+| Feature | Description |
+|---|---|
+| 🧬 Multi-species promoter prediction | Promoter/non-promoter classification across diverse eukaryotic species |
+| 🧪 GC-matched negative dataset | Species-wise non-promoter sequences with comparable GC-content |
+| 🤖 Deep learning model | CNN–BiLSTM attention model for promoter prediction |
+| 📊 Promoter strength classification | Strong/weak promoter labels using FANTOM5 CAGE activity |
+| 🔍 Explainable AI | Attention motifs and SHAP-based nucleotide attribution |
+| 🌍 Species-aware interpretation | Motif-switching analysis across species |
+
+---
+
+## 🧠 Framework Summary
 
 ```text
-−249 bp upstream to +50 bp downstream of TSS
+EPDnew promoters + species-matched non-promoters
+                    ↓
+        Multi-species benchmark dataset
+                    ↓
+       Feature encoding and model comparison
+                    ↓
+          CNN–BiLSTM attention model
+                    ↓
+       Promoter vs non-promoter prediction
+                    ↓
+ Attention-based motif analysis + SHAP interpretation
+                    ↓
+ FANTOM5 CAGE-based strong/weak promoter classification
+                    ↓
+      Species-aware motif-switching analysis
