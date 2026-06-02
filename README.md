@@ -1,5 +1,6 @@
 # 🧬 Species-aware Eukaryotic Promoter Prediction  
 ### A Two-stage Framework for Generalized Promoter Recognition and Strong/Weak Promoter Classification
+<img width="1672" height="941" alt="Graphical Abstract" src="https://github.com/user-attachments/assets/638dcb59-386c-456c-82df-17e56eedb794" />
 
 <p align="center">
   <img src="docs/graphical_abstract.png" width="850"/>
