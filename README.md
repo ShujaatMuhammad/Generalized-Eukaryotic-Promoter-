@@ -40,7 +40,10 @@ The framework also includes model interpretation using **attention-based motif a
 | 📊 Promoter strength classification | Strong/weak promoter labels using FANTOM5 CAGE activity |
 | 🔍 Explainable AI | Attention motifs and SHAP-based nucleotide attribution |
 | 🌍 Species-aware interpretation | Motif-switching analysis across species |
-
+##Datset and model links:
+https://drive.google.com/file/d/1PhSkYnteEgx-SLMRG103XpKrc1bfEOIG/view?usp=sharing
+Stage and Stage 2 models:
+https://drive.google.com/file/d/1571yQ50X2IYdz5rXo_GnROreOpmm7AYt/view?usp=sharing
 ---
 
 ## 🧠 Framework Summary
